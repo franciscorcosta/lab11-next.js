@@ -1,11 +1,11 @@
 
 interface products {
     id: number;
-    title: String;
+    title: string;
     price: number;
-    description: String;
-    category: String;
-    image: String;
+    description: string;
+    category: string;
+    image: string;
     rating: {
         rate: number;
         count: number;
