@@ -5,11 +5,10 @@ import useSWR from 'swr'
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
+export default function Page() {
+  const { data, error } = useSWR<Product[]>('/api/products', fetcher);
 
-export default function page() {
-  const { data, error, isLoading } = useSWR<Product[]>('/api/products', fetcher);
-
-  if (isLoading) return <div>Carregando produtos...</div>;
+  if (!data && !error) return <div>Carregando produtos...</div>;  // Espera carregar os dados ou lidar com erro
   if (error) return <div>Erro ao carregar os produtos.</div>;
 
   return (
@@ -42,6 +41,4 @@ export default function page() {
       )}
     </div>
   );
-
-
 }
