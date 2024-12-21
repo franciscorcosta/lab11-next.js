@@ -32,8 +32,13 @@ export default function Page() {
               style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
             />
 
-            <p>Preço: ${product.price}</p>
+            <p>Preço: €{product.price}</p>
             <p>{product.description}</p>
+            <p>
+              Avaliação: {product.rating.rate} ⭐ ({product.rating.count} avaliações)
+            </p>
+
+            <p>{ }</p>
           </div>
         ))
       ) : (
