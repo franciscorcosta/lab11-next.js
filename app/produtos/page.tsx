@@ -37,8 +37,6 @@ export default function Page() {
             <p>
               Avaliação: {product.rating.rate} ⭐ ({product.rating.count} avaliações)
             </p>
-
-            <p>{ }</p>
           </div>
         ))
       ) : (
